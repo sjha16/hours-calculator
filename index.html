@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hours Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Hours Calculator</h1>
+
+    <div>
+        <h2>Time Entry</h2>
+        <div>
+            <label for="startTimeText">Start Time (UTC 24-hour format): </label>
+            <input type="text" id="startTimeText" placeholder="HH:MM" maxlength="5" required>
+        </div>
+        <div>
+            <label for="endTimeText">End Time (UTC 24-hour format): </label>
+            <input type="text" id="endTimeText" placeholder="HH:MM" maxlength="5" required>
+        </div>
+        <button onclick="addTimeRange()">Add Time Range</button>
+    </div>
+
+    <h2>History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Duration</th>
+                <th>Total Hours</th>
+            </tr>
+        </thead>
+        <tbody id="timeRanges"></tbody>
+    </table>
+
+    <h2>Total Hours</h2>
+    <p id="totalHours">0 hours 0 minutes</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
