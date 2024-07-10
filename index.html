@@ -34,6 +34,25 @@
     <h2>Total Hours</h2>
     <p id="totalHours">0 hours 0 minutes</p>
 
+    <div>
+        <h2>Time Calculator</h2>
+        <div>
+            <label for="hoursInput1">Hours 1: </label>
+            <input type="number" id="hoursInput1" placeholder="Hours" required>
+            <label for="minutesInput1">Minutes 1: </label>
+            <input type="number" id="minutesInput1" placeholder="Minutes" required>
+        </div>
+        <div>
+            <label for="hoursInput2">Hours 2: </label>
+            <input type="number" id="hoursInput2" placeholder="Hours" required>
+            <label for="minutesInput2">Minutes 2: </label>
+            <input type="number" id="minutesInput2" placeholder="Minutes" required>
+        </div>
+        <button onclick="timeCalculator('add')">Add</button>
+        <button onclick="timeCalculator('subtract')">Subtract</button>
+        <p id="timeCalcResult">Result: 0 hours 0 minutes</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
