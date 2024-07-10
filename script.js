@@ -62,3 +62,29 @@ function calculateTotalHours() {
     const totalRemainingMinutes = totalMinutes % 60;
     document.getElementById('totalHours').textContent = `${totalHours} hours ${totalRemainingMinutes} minutes`;
 }
+
+function timeCalculator(operation) {
+    const hours1 = parseInt(document.getElementById('hoursInput1').value);
+    const minutes1 = parseInt(document.getElementById('minutesInput1').value);
+    const hours2 = parseInt(document.getElementById('hoursInput2').value);
+    const minutes2 = parseInt(document.getElementById('minutesInput2').value);
+
+    if (isNaN(hours1) || isNaN(minutes1) || isNaN(hours2) || isNaN(minutes2)) {
+        alert('Please enter valid hours and minutes');
+        return;
+    }
+
+    let totalMinutes1 = hours1 * 60 + minutes1;
+    let totalMinutes2 = hours2 * 60 + minutes2;
+
+    let resultMinutes;
+    if (operation === 'add') {
+        resultMinutes = totalMinutes1 + totalMinutes2;
+    } else if (operation === 'subtract') {
+        resultMinutes = totalMinutes1 - totalMinutes2;
+    }
+
+    const resultHours = Math.floor(resultMinutes / 60);
+    const resultRemainingMinutes = resultMinutes % 60;
+    document.getElementById('timeCalcResult').textContent = `Result: ${resultHours} hours ${resultRemainingMinutes} minutes`;
+}
